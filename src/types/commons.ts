@@ -1,3 +1,3 @@
-export interface ViewQueryError {
+export interface QueryError {
     status: number; data: string;
 }

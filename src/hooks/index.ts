@@ -1,17 +1,23 @@
-import { LandingViewQueryProps, LogoData, PageNavigationItemProps, SiteHeroData, Toggle } from '../types';
+import {
+    BlogCategoryContentData,
+    BlogContentData,
+    BlogPostContentData,
+    ContentData,
+    HomeContentData,
+    LandingViewQueryType,
+    SiteNavigationData,
+    SiteNavigationDrawer
+} from '../types';
 
 type FakeFunc<T> = () => T;
 const fakeFuncInst: FakeFunc<any> = () => {};
 
-export const useLandingViewQuery: FakeFunc<LandingViewQueryProps> = fakeFuncInst;
+export const usePageContentData: FakeFunc<ContentData> = fakeFuncInst;
+export const useLandingViewQuery: FakeFunc<LandingViewQueryType> = fakeFuncInst;
+export const useSiteNavigationData: FakeFunc<SiteNavigationData> = fakeFuncInst;
+export const useSiteNavigationDrawer: FakeFunc<SiteNavigationDrawer> = fakeFuncInst;
+export const useBlogCategoryContentData: FakeFunc<BlogCategoryContentData> = fakeFuncInst;
+export const useBlogContentData: FakeFunc<BlogContentData> = fakeFuncInst;
+export const useBlogPostContentData: FakeFunc<BlogPostContentData> = fakeFuncInst;
+export const useHomeContentData: FakeFunc<HomeContentData> = fakeFuncInst;
 
-export const useLogoData: FakeFunc<LogoData> = fakeFuncInst;
-
-export type UsePageNavigationItemsTypes = {
-    pageNavigationItems: Array<PageNavigationItemProps>;
-};
-export const usePageNavigationItems: FakeFunc<UsePageNavigationItemsTypes> = fakeFuncInst;
-
-export const useSiteHeroData: FakeFunc<SiteHeroData> = fakeFuncInst;
-
-export const useToggle: FakeFunc<Toggle> = fakeFuncInst;
